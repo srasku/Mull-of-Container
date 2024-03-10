@@ -26,7 +26,6 @@ RUN set -ex && \
         build-essential \
         clang \
         cmake \
-        libclang-10-dev \
         libssl-dev \
         ninja-build
 
@@ -63,5 +62,5 @@ RUN set -ex && \
 RUN set -ex && \
     apt-get update && \
     apt-get install -y \
-        libclang-11-dev \
+        libclang-10-dev \
         libsqlite3-dev

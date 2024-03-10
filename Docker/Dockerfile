@@ -10,7 +10,7 @@ RUN set -ex && \
     cd mull && \
     mkdir build.dir && \
     cd build.dir && \
-    cmake -DCMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES=/usr/lib/llvm-${LLVM_VERSION}/include .. && \
+    cmake -DCMAKE_PREFIX_PATH="/usr/lib/llvm-${LLVM_VERSION}/cmake/;/usr/lib/cmake/clang-10/" .. \
     make VERBOSE=1 mull-runner-${LLVM_VERSION} && \
     make mull-tests
 
